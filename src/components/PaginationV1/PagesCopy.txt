@@ -1,0 +1,62 @@
+import React, { useState } from "react";
+import Paginate from "./Paginate";
+
+const Pages = () => {
+  var exampleItems = [...Array(150).keys()].map((i) => ({
+    id: i + 1,
+    name: "Item " + (i + 1),
+  }));
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(4);
+  const [state, setState] = useState({
+    // exampleItems:
+    exampleItems: exampleItems,
+    pageOfItems: [],
+  });
+
+  const noExampleItems =
+    !exampleItems || (exampleItems && exampleItems.length === 0);
+  //GET CURRENT POST
+  // if(!noPeople) {
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = !noExampleItems
+    ? state.exampleItems.slice(indexOfFirstItem, indexOfLastItem)
+    : null;
+  // }
+  const onChangePage = (pageOfItems) => {
+    // update state with new page of items
+    setState({
+      ...state,
+      pageOfItems: pageOfItems,
+    });
+  };
+
+  console.log("items on this page", state.pageOfItems);
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  return (
+    <>
+      <div>
+        <div className="container">
+          <div className="text-center">
+            <h1>Pagination</h1>
+            {currentItems.map((item) => (
+              <div key={item.id}>{item.name}</div>
+            ))}
+
+            <Paginate
+              itemsPerPage={itemsPerPage}
+              items={exampleItems}
+              paginate={paginate}
+              onChangePage={onChangePage}
+            />
+          </div>
+        </div>
+        <hr />
+      </div>
+    </>
+  );
+};
+
+export default Pages;
