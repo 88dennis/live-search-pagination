@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/88dennis/live-search-pagination/static/css/main.daf24793.chunk.css",
-    "main.js": "/88dennis/live-search-pagination/static/js/main.f93ad719.chunk.js",
-    "main.js.map": "/88dennis/live-search-pagination/static/js/main.f93ad719.chunk.js.map",
-    "runtime-main.js": "/88dennis/live-search-pagination/static/js/runtime-main.80786901.js",
-    "runtime-main.js.map": "/88dennis/live-search-pagination/static/js/runtime-main.80786901.js.map",
-    "static/js/2.14026e77.chunk.js": "/88dennis/live-search-pagination/static/js/2.14026e77.chunk.js",
-    "static/js/2.14026e77.chunk.js.map": "/88dennis/live-search-pagination/static/js/2.14026e77.chunk.js.map",
-    "static/js/3.6b1ffc46.chunk.js": "/88dennis/live-search-pagination/static/js/3.6b1ffc46.chunk.js",
-    "static/js/3.6b1ffc46.chunk.js.map": "/88dennis/live-search-pagination/static/js/3.6b1ffc46.chunk.js.map",
-    "index.html": "/88dennis/live-search-pagination/index.html",
-    "static/css/main.daf24793.chunk.css.map": "/88dennis/live-search-pagination/static/css/main.daf24793.chunk.css.map",
-    "static/js/2.14026e77.chunk.js.LICENSE.txt": "/88dennis/live-search-pagination/static/js/2.14026e77.chunk.js.LICENSE.txt"
+    "main.css": "/live-search-pagination/static/css/main.daf24793.chunk.css",
+    "main.js": "/live-search-pagination/static/js/main.e04b8d27.chunk.js",
+    "main.js.map": "/live-search-pagination/static/js/main.e04b8d27.chunk.js.map",
+    "runtime-main.js": "/live-search-pagination/static/js/runtime-main.9e4cbadd.js",
+    "runtime-main.js.map": "/live-search-pagination/static/js/runtime-main.9e4cbadd.js.map",
+    "static/js/2.14026e77.chunk.js": "/live-search-pagination/static/js/2.14026e77.chunk.js",
+    "static/js/2.14026e77.chunk.js.map": "/live-search-pagination/static/js/2.14026e77.chunk.js.map",
+    "static/js/3.6b1ffc46.chunk.js": "/live-search-pagination/static/js/3.6b1ffc46.chunk.js",
+    "static/js/3.6b1ffc46.chunk.js.map": "/live-search-pagination/static/js/3.6b1ffc46.chunk.js.map",
+    "index.html": "/live-search-pagination/index.html",
+    "static/css/main.daf24793.chunk.css.map": "/live-search-pagination/static/css/main.daf24793.chunk.css.map",
+    "static/js/2.14026e77.chunk.js.LICENSE.txt": "/live-search-pagination/static/js/2.14026e77.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.80786901.js",
+    "static/js/runtime-main.9e4cbadd.js",
     "static/js/2.14026e77.chunk.js",
     "static/css/main.daf24793.chunk.css",
-    "static/js/main.f93ad719.chunk.js"
+    "static/js/main.e04b8d27.chunk.js"
   ]
 }
