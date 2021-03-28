@@ -2,7 +2,7 @@
   "name": "live-search-pagination",
   "version": "0.1.0",
   "private": true,
-  "homepage": "git remote add origin https://github.com/88dennis/live-search-pagination.git",
+  "homepage": "https://github.com/88dennis/live-search-pagination.git",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.5",
