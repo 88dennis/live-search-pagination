@@ -1,10 +1,16 @@
 import './App.css';
-import SearchLiveDmsComp from'./components/SearchLiveDmsComp/SearchLiveDmsComp'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import SearchLiveDmsComp from './components/SearchLiveDmsComp/SearchLiveDmsComp';
+
 function App() {
   return (
-    <div className="App">
-     <SearchLiveDmsComp />
-    </div>
+
+    <Router basename={process.env.PUBLIC_URL}>
+    <Switch>
+      <Route path="/" component={SearchLiveDmsComp} exact />
+    </Switch>
+  </Router>
+    
   );
 }
 
