@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/git%20remote%20add%20origin%20https://github.com/88dennis/live-search-pagination.git/static/css/main.daf24793.chunk.css",
-    "main.js": "/git%20remote%20add%20origin%20https://github.com/88dennis/live-search-pagination.git/static/js/main.3fd21b7a.chunk.js",
-    "main.js.map": "/git%20remote%20add%20origin%20https://github.com/88dennis/live-search-pagination.git/static/js/main.3fd21b7a.chunk.js.map",
-    "runtime-main.js": "/git%20remote%20add%20origin%20https://github.com/88dennis/live-search-pagination.git/static/js/runtime-main.d9332428.js",
-    "runtime-main.js.map": "/git%20remote%20add%20origin%20https://github.com/88dennis/live-search-pagination.git/static/js/runtime-main.d9332428.js.map",
-    "static/js/2.b6e491d6.chunk.js": "/git%20remote%20add%20origin%20https://github.com/88dennis/live-search-pagination.git/static/js/2.b6e491d6.chunk.js",
-    "static/js/2.b6e491d6.chunk.js.map": "/git%20remote%20add%20origin%20https://github.com/88dennis/live-search-pagination.git/static/js/2.b6e491d6.chunk.js.map",
-    "static/js/3.bab3d15a.chunk.js": "/git%20remote%20add%20origin%20https://github.com/88dennis/live-search-pagination.git/static/js/3.bab3d15a.chunk.js",
-    "static/js/3.bab3d15a.chunk.js.map": "/git%20remote%20add%20origin%20https://github.com/88dennis/live-search-pagination.git/static/js/3.bab3d15a.chunk.js.map",
-    "index.html": "/git%20remote%20add%20origin%20https://github.com/88dennis/live-search-pagination.git/index.html",
-    "static/css/main.daf24793.chunk.css.map": "/git%20remote%20add%20origin%20https://github.com/88dennis/live-search-pagination.git/static/css/main.daf24793.chunk.css.map",
-    "static/js/2.b6e491d6.chunk.js.LICENSE.txt": "/git%20remote%20add%20origin%20https://github.com/88dennis/live-search-pagination.git/static/js/2.b6e491d6.chunk.js.LICENSE.txt"
+    "main.css": "/88dennis/live-search-pagination.git/static/css/main.daf24793.chunk.css",
+    "main.js": "/88dennis/live-search-pagination.git/static/js/main.3fd21b7a.chunk.js",
+    "main.js.map": "/88dennis/live-search-pagination.git/static/js/main.3fd21b7a.chunk.js.map",
+    "runtime-main.js": "/88dennis/live-search-pagination.git/static/js/runtime-main.3cffc654.js",
+    "runtime-main.js.map": "/88dennis/live-search-pagination.git/static/js/runtime-main.3cffc654.js.map",
+    "static/js/2.b6e491d6.chunk.js": "/88dennis/live-search-pagination.git/static/js/2.b6e491d6.chunk.js",
+    "static/js/2.b6e491d6.chunk.js.map": "/88dennis/live-search-pagination.git/static/js/2.b6e491d6.chunk.js.map",
+    "static/js/3.bab3d15a.chunk.js": "/88dennis/live-search-pagination.git/static/js/3.bab3d15a.chunk.js",
+    "static/js/3.bab3d15a.chunk.js.map": "/88dennis/live-search-pagination.git/static/js/3.bab3d15a.chunk.js.map",
+    "index.html": "/88dennis/live-search-pagination.git/index.html",
+    "static/css/main.daf24793.chunk.css.map": "/88dennis/live-search-pagination.git/static/css/main.daf24793.chunk.css.map",
+    "static/js/2.b6e491d6.chunk.js.LICENSE.txt": "/88dennis/live-search-pagination.git/static/js/2.b6e491d6.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.d9332428.js",
+    "static/js/runtime-main.3cffc654.js",
     "static/js/2.b6e491d6.chunk.js",
     "static/css/main.daf24793.chunk.css",
     "static/js/main.3fd21b7a.chunk.js"
