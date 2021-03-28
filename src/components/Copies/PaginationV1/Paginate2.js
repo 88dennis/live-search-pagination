@@ -10,7 +10,7 @@ const Paginate = (props) => {
     sheet: 1,
   });
   const [mount, setMount] = React.useState(false);
-
+  
   React.useEffect(() => {
     isMounted = true;
     let page = state.sheet;
@@ -70,32 +70,34 @@ const Paginate = (props) => {
         pages: pages,
       };
     };
-    // get new pager object for specified page
-    pager = getPager(items.length, page);
+     // get new pager object for specified page
+     pager = getPager(items.length, page);
 
-    setState({
+     setState({ 
       //  sheet: pager.currentPage,
-      pager: pager,
-    });
-
-    // get new page of items from items array
+       pager: pager });
+     
+      // get new page of items from items array
 
     //  let pageOfItems = items.slice(pager.startIndex, pager.endIndex + 1);
-    // update state
+      // update state
 
     if (!mount) {
       setMount(true);
 
       if (isMounted) {
-        // call change page function in parent component
-        // props.onChangePage(pageOfItems);
+
+      // call change page function in parent component
+      // props.onChangePage(pageOfItems);
       }
+  
     }
 
     return () => {
       isMounted = false;
     };
   }, [mount, props]);
+
 
   // React.useEffect(() => {
 
@@ -176,7 +178,7 @@ const Paginate = (props) => {
   // }, [state.pager, state.sheet, mount, props]);
 
   const pageSet = (page) => {
-    console.log(page);
+    console.log(page)
     // window.scrollTo({ top: 0, behavior: "smooth" });
     props.paginate(page);
     let items = props.items;
@@ -187,24 +189,29 @@ const Paginate = (props) => {
     // get new pager object for specified page
     pager = getPager2(items.length, page);
 
-    console.log("PAGESETPAGER", pager);
+    console.log("PAGESETPAGER", pager )
     // get new page of items from items array
     // let pageOfItems = items.slice(pager.startIndex, pager.endIndex + 1);
-    // console.log(pageOfItems);
+// console.log(pageOfItems);
     // update state
-    setState({
+    setState({ 
       ...state,
-      sheet: page,
-      pager: pager,
-    });
-    //   // call change page function in parent component
+      sheet:page,
+      pager: pager });
+  //   // call change page function in parent component
     // props.onChangePage(pageOfItems);
   };
 
+
   //THE GETPAGER RETURNS AN OBJECT TO UPDATE THE STATE.PAGER
   const getPager2 = (totalItems, currentPage, pageSize) => {
+
+    // let page = state.sheet;
+    // let items = props.items;
+    // let pager = state.pager;
     // default to first page
     currentPage = currentPage;
+    
 
     // // default page size is 10
     pageSize = props.itemsPerPage || 10;
@@ -242,15 +249,17 @@ const Paginate = (props) => {
       (i) => startPage + i
     );
 
-    console.log("GETPAGER2 *************");
-    console.log("totalItems", totalItems);
-    console.log("currentPage", currentPage);
-    console.log("pageSize", pageSize);
-    console.log("totalPages", totalPages);
-    console.log("startIndex", startIndex);
-    console.log("endIndex", endIndex);
-    console.log("pages", pages);
-    console.log("GETPAGER2 *************");
+
+
+    console.log("GETPAGER2 *************")
+    console.log("totalItems", totalItems)
+    console.log("currentPage",currentPage)
+    console.log("pageSize",pageSize)
+    console.log("totalPages",totalPages)
+    console.log("startIndex",startIndex)
+    console.log("endIndex",endIndex)
+    console.log("pages",pages)
+    console.log("GETPAGER2 *************")
     // return object with all pager properties required by the view
     return {
       totalItems: totalItems,
@@ -263,6 +272,8 @@ const Paginate = (props) => {
       endIndex: endIndex,
       pages: pages,
     };
+
+
   };
 
   let pager = state.pager;
@@ -276,87 +287,83 @@ const Paginate = (props) => {
     <>
       <div className="main_ul_div">
         <div>
-          <br />
-          <hr />
+          {/* {JSON.stringify(pager)} */}
+          {/* {JSON.stringify(pager.currentPage)} */}
 
-          <div>
-            <ul className="pagination">
-              <li
-                tabIndex="0"
-                className={pager.currentPage === 1 ? "disabled" : ""}
-              >
-                {pager.currentPage === 1 ? (
-                  <button>
-                    <i className="fas fa-angle-double-left"></i>
-                  </button>
-                ) : (
-                  <button onClick={() => pageSet(pager.currentPage - 1)}>
-                    <i className="fas fa-angle-double-left"></i>
-                  </button>
-                )}
+          <br/>
+          <hr/>
+          {/* <div>
+            <ul className="pagination2">
+              <li className={pager.currentPage === 1 ? "disabled" : ""}>
+                <button onClick={() => pageSet(pager.currentPage - 1)}>
+                  Previous
+                </button>
               </li>
               <li className={pager.currentPage === 1 ? "disabled" : ""}>
-                {pager.currentPage === 1 ? (
-                  <button>First</button>
-                ) : (
-                  <button onClick={() => pageSet(1)}>First</button>
-                )}
-              </li>
-              <li
-                className={
-                  pager.currentPage === pager.totalPages ? "disabled" : ""
-                }
-              >
-                {pager.currentPage === pager.totalPages ? (
-                  <button>Last</button>
-                ) : (
-                  <button onClick={() => pageSet(pager.totalPages)}>
-                    Last
-                  </button>
-                )}
-              </li>
-              <li
-                className={
-                  pager.currentPage === pager.totalPages ? "disabled" : ""
-                }
-              >
-                {pager.currentPage === pager.totalPages ? (
-                  <button>
-                    <i className="fas fa-angle-double-right"></i>
-                  </button>
-                ) : (
-                  <button onClick={() => pageSet(pager.currentPage + 1)}>
-                    <i className="fas fa-angle-double-right"></i>
-                  </button>
-                )}
+                <button onClick={() => pageSet(1)}>First</button>
               </li>
             </ul>
           </div>
 
-          <div>
-            <ul className="pagination">
-              {pager.pages.map((page, index) => (
-                <li
-                  key={index}
-                  className={pager.currentPage === page ? "active" : ""}
-                >
-                  <button onClick={() => pageSet(page)}>{page}</button>
-                </li>
-              ))}
-              
-            </ul>
-            {pager.totalPages !== pager.endPage && (
-                <span
-                  style={{
-                    paddingTop: "15px",
-                    marginLeft: "5px",
-                    marginRight: "5px",
-                  }}
-                >
-                  ....
-                </span>
-              )}
+            <ul className="pagination2">
+              <li
+                className={
+                  pager.currentPage === pager.totalPages ? "disabled" : ""
+                }
+              >
+                <button onClick={() => pageSet(pager.totalPages)}>Last</button>
+              </li>
+              <li
+                className={
+                  pager.currentPage === pager.totalPages ? "disabled" : ""
+                }
+              >
+                <button onClick={() => pageSet(pager.currentPage + 1)}>
+                  Next
+                </button>
+              </li>
+            </ul> */}
+<div>
+<ul className="pagination">
+
+<li tabIndex="0" className={pager.currentPage === 1 ? "disabled" : ""}>
+    {pager.currentPage === 1 ?  <button><i className="fas fa-angle-double-left"></i></button> :
+        <button onClick={() => pageSet(pager.currentPage - 1)}><i className="fas fa-angle-double-left"></i></button>}
+      </li>
+<li className={pager.currentPage === 1 ? "disabled" : ""}>
+{pager.currentPage === 1 ?  <button>First</button> :
+        <button onClick={() => pageSet(1)}>First</button>}
+      </li>
+      <li className={pager.currentPage === pager.totalPages ? "disabled" : ""}>
+{pager.currentPage === pager.totalPages ?  <button>Last</button> :
+        <button onClick={() => pageSet(pager.totalPages)}>Last</button>}
+      </li>
+<li className={pager.currentPage === pager.totalPages ? "disabled" : ""}>
+{pager.currentPage === pager.totalPages ?  <button><i className="fas fa-angle-double-right"></i></button> :
+        <button onClick={() => pageSet(pager.currentPage + 1)}><i className="fas fa-angle-double-right"></i></button>}
+      </li>
+</ul>
+</div>
+
+{/* DO NOT DELETE THIS PART */}
+<div>
+          <ul className="pagination">
+            {pager.pages.map((page, index) => (
+              <li
+            
+                key={index}
+                className={pager.currentPage === page ? "active" : ""}
+              >
+                <button onClick={() => pageSet(page)}>{page}</button>
+              </li>
+            ))}
+            {pager.totalPages !== pager.endPage && <span style={{paddingTop: "15px", marginLeft:"5px", marginRight:"5px" }}>....</span>  }
+
+          </ul>
           </div>
+{/* DO NOT DELETE THIS PART */}
+
+         
         </div>
       </div>
     </>

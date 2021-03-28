@@ -4,12 +4,6 @@
     margin-top: 10px;
 }
 
-.container_results {
-    display:flex;
-    justify-content: center;
-    min-width: 250px;
-}
-
 .pagination>li {
     display: inline;
 }
@@ -156,16 +150,4 @@
 
 .pagination_div {
     display: flex;
-}
-
-
-@media (max-width: 768px) {
-   
-.pagination>li>button,
-.pagination>li>span {
-    padding: 3px 6px;
-    margin-left: 1px;
-    line-height: 1;
-    font-size: .6rem;
-}
 }
